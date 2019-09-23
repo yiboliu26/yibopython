@@ -79,3 +79,35 @@ for name, languages in favorite_languages.items():
     print("\n" + name.title() + "'s favorite languages are:")
     for language in languages:
         print("\t " + language.title())
+
+
+from collections import OrderedDict
+
+favorite_languages = OrderedDict()
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'python'
+for name, language in favorite_languages.items():
+    print(name.title() + "'s favorite languages is " + language.title() + ".")
+
+
+from random import randint
+x = randint(1,6)
+print(x)
+
+class Die():
+    def __init__(self):
+        self.sides = 6
+    def roll_die(self):
+        x= randint(1, 6)
+        self.sides = x
+        print(self.sides)
+die_01 = Die()
+die_01.roll_die()   
+for value in range(10):
+    die_01.roll_die()
+
+    
+        
+        

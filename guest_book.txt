@@ -1,0 +1,19 @@
+yibo
+flora
+jack
+david
+& C:/Users/yi_bo/Anaconda3/python.exe c:/yibo_git/yibopython/guest.py
+& C:/Users/yi_bo/Anaconda3/python.exe
+filename = 'why_programing.txt'
+print("Enter 'quit' when you are finished.")
+
+while True:
+    reason = input("Enter why you like programing: ")
+    if reason == 'quit':
+        break
+    else:
+        with open(filename, 'a') as file_object:
+            file_object.write(reason)
+            print("Thank you!")
+& C:/Users/yi_bo/Anaconda3/python.exe c:/yibo_git/yibopython/guest.py
+yibo

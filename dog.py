@@ -42,6 +42,15 @@ class Restaurant():
     def increment_number_served(self, people):
         self.number_served += people
 
+class IceCreamStand(Restaurant):
+    def __init__(self, resaurant_type, cuisine_type):
+        super().__init__(resaurant_type, cuisine_type)
+        self.flavors = ['orange', 'mango', 'coconut']
+    def describe_flavors(self):
+        for flavors in self.flavors:
+            print("This restaurant " + self.rt.title() + " of "+ self.ct + " type provides a " + flavors + " taste icecream!")
+
+
 
 my_restaurant = Restaurant('osaka', 'japanese food')
 my_restaurant.describe_restaurant()
@@ -69,7 +78,7 @@ class User():
         print("You have attempted to log in for " + str(self.login_attempts) + " times.")
     def check_login_attempts(self, times):
         self.login_attempts = times
-    def increment_login_attempts(self, repeating = 1):
+    def increment_login_attempts(self):
         self.login_attempts += 1
     def reset_login_attempts(self, reset=0):
         self.login_attempts = reset
@@ -90,3 +99,21 @@ new_user.increment_login_attempts()
 new_user.read_login_attempts()
 new_user.reset_login_attempts()
 new_user.read_login_attempts()
+
+
+class Privileges():
+    def __init__(self, privileges = 0):
+        self.privileges = ['can add post', 'can delete post', 'can ban user']
+    def show_privileges(self):
+        for privilege in self.privileges:
+            print("Only admin " + privilege + ".")
+
+class Admin(User):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges()
+
+new_admin = Admin('lucy', 'green')
+new_admin.privileges.show_privileges()
+
+

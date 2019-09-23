@@ -1,0 +1,5 @@
+In Python you can learn dictionary.
+In Python you can learn function.
+In Python you can learn class.
+In Python you can learn list.
+In Python you can learn tuple.
